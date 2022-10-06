@@ -1,4 +1,5 @@
 tutorial:gf:0
+detected:gf:0
 bopeebo:dad:1
 fresh:dad:1
 dadbattle:dad:1
