@@ -61,6 +61,7 @@ class PlayState extends MusicBeatState
 
 	public static var camFollowSpeed:Float = 0.04;
 
+        var stageLevel:Bool = false;
 	var halloweenLevel:Bool = false;
 
 	private var vocals:FlxSound;
