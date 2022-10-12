@@ -109,6 +109,16 @@ class PlayState extends MusicBeatState
 
 	var dialogue:Array<String> = ['blah blah blah', 'coolswag'];
 
+        var warnOne:FlxSprite;
+        var warnTwo:FlxSprite;
+        var warnThree:FlxSprite;
+        var warnFour:FlxSprite;
+        var soundWarnOne:FlxSprite;
+        var soundWarnTwo:FlxSprite;
+        var soundWarnThree:FlxSprite;
+        var soundWarnFour:FlxSprite;
+        var isStage:Bool = false;
+
 	var halloweenBG:FlxSprite;
 	var isHalloween:Bool = false;
 
@@ -262,6 +272,20 @@ class PlayState extends MusicBeatState
 
 		switch (SONG.song.toLowerCase())
 		{
+                        case 'tutorial' | 'detected':
+                        {
+                                curStage = 'stage';
+                                  stageLevel = true;
+
+                                  var stageTex = Paths.getSparrowAtlas('stage');
+   
+                                  stageBg = new FlxSprite(-200, -100);
+                                  stageBg.frames = stageTex;
+                                  stage.isAntianalising = false;
+                                  add(stageBg);
+     
+                                  isStage = true;
+                        }
                         case 'spookeez' | 'monster' | 'south': 
                         {
                                 curStage = 'spooky';
