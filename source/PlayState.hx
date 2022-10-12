@@ -284,6 +284,16 @@ class PlayState extends MusicBeatState
                                   stageBg.frames = stageTex;
                                   stage.isAntianalising = false;
                                   add(stageBg);
+
+                                  warn = new FlxSprite(-200, -100);
+                                  warnSoundOne = new FlxSound();
+                                  warnSoundTwo = new FlxSound();
+                                  warnSoundThree = new FlxSound();
+                                  warnSoundFour = new FlxSound();
+                                  FlxG.sound.list.add(warnSoundOne);
+                                  FlxG.sound.list.add(warnSoundTwo);
+                                  FlxG.sound.list.add(warnSoundThree);
+                                  FlxG.sound.list.add(warnSoundFour);
      
                                   isStage = true;
                         }
