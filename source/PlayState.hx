@@ -285,11 +285,14 @@ class PlayState extends MusicBeatState
                                   stage.isAntianalising = false;
                                   add(stageBg);
 
-                                  warn = new FlxSprite(-200, -100);
-                                  warnSoundOne = new FlxSound();
-                                  warnSoundTwo = new FlxSound();
-                                  warnSoundThree = new FlxSound();
-                                  warnSoundFour = new FlxSound();
+                                  warnOne = new FlxSprite(-200, -100);
+                                  warnTwo = new FlxSprite(-200, -100);
+                                  warnThree = new FlxSprite(-200, -100);
+                                  warnFour = new FlxSprite(-200, -100);
+                                  soundWarnOne= new FlxSound();
+                                  soundWarnTwo = new FlxSound();
+                                  soundWarnThree = new FlxSound();
+                                  soundWarnFour = new FlxSound();
                                   FlxG.sound.list.add(warnSoundOne);
                                   FlxG.sound.list.add(warnSoundTwo);
                                   FlxG.sound.list.add(warnSoundThree);
