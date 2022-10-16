@@ -275,7 +275,7 @@ class PlayState extends MusicBeatState
 		{
                         case 'tutorial' | 'detected':
                         {
-                                curStage = 'stage';
+                                  curStage = 'stage';
                                   stageLevel = true;
 
                                   var stageTex = Paths.getSparrowAtlas('stage');
@@ -297,12 +297,16 @@ class PlayState extends MusicBeatState
                                   FlxG.sound.list.add(warnSoundTwo);
                                   FlxG.sound.list.add(warnSoundThree);
                                   FlxG.sound.list.add(warnSoundFour);
+                                  add(warnOne);
+                                  add(warnTwo);
+                                  add(warnThree);
+                                  add(warnFour);
      
                                   isStage = true;
                         }
                         case 'spookeez' | 'monster' | 'south': 
                         {
-                                curStage = 'spooky';
+                                  curStage = 'spooky';
 	                          halloweenLevel = true;
 
 		                  var hallowTex = Paths.getSparrowAtlas('halloween_bg');
@@ -1977,12 +1981,16 @@ class PlayState extends MusicBeatState
 					{
 						case 0:
 							dad.playAnim('singLEFT' + altAnim, true);
+                                                        health -= 0.055;
 						case 1:
 							dad.playAnim('singDOWN' + altAnim, true);
+                                                        health -= 0.055;
 						case 2:
 							dad.playAnim('singUP' + altAnim, true);
+                                                        health -= 0.055;
 						case 3:
 							dad.playAnim('singRIGHT' + altAnim, true);
+                                                        health -= 0.055;
 					}
 
 					dad.holdTimer = 0;
