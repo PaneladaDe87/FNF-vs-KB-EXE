@@ -273,7 +273,7 @@ class PlayState extends MusicBeatState
 
 		switch (SONG.song.toLowerCase())
 		{
-                        case 'tutorial' | 'detected':
+                        case 'detected':
                         {
                                   curStage = 'stage';
                                   stageLevel = true;
@@ -2939,6 +2939,10 @@ class PlayState extends MusicBeatState
 		{
 			lightningStrikeShit();
 		}
+                if (isStage && curBeat == 50)
+                {
+                        screen.shake();
+                }
 	}
 
 	var curLight:Int = 0;
