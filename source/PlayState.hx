@@ -108,18 +108,7 @@ class PlayState extends MusicBeatState
   public var downToggle = Config.downscroll;
   public var splashToggle = Config.splash;
 
-	var dialogue:Array<String> = ['blah blah blah', 'coolswag'];
-
-        var warnOne:FlxSprite;
-        var warnTwo:FlxSprite;
-        var warnThree:FlxSprite;
-        var warnFour:FlxSprite;
-        var soundWarnOne:FlxSprite;
-        var soundWarnTwo:FlxSprite;
-        var soundWarnThree:FlxSprite;
-        var soundWarnFour:FlxSprite;
-        var isStage:Bool = false;
-
+	var dialogue:Array<String> = ['blah blah blah', 'coolswag']
 	var halloweenBG:FlxSprite;
 	var isHalloween:Bool = false;
 
@@ -273,37 +262,6 @@ class PlayState extends MusicBeatState
 
 		switch (SONG.song.toLowerCase())
 		{
-                        case 'detected':
-                        {
-                                  curStage = 'stage';
-                                  stageLevel = true;
-
-                                  var stageTex = Paths.getSparrowAtlas('stage');
-   
-                                  stageBg = new FlxSprite(-200, -100);
-                                  stageBg.frames = stageTex;
-                                  stage.isAntianalising = false;
-                                  add(stageBg);
-
-                                  warnOne = new FlxSprite(-200, -100);
-                                  warnTwo = new FlxSprite(-200, -100);
-                                  warnThree = new FlxSprite(-200, -100);
-                                  warnFour = new FlxSprite(-200, -100);
-                                  soundWarnOne= new FlxSound();
-                                  soundWarnTwo = new FlxSound();
-                                  soundWarnThree = new FlxSound();
-                                  soundWarnFour = new FlxSound();
-                                  FlxG.sound.list.add(warnSoundOne);
-                                  FlxG.sound.list.add(warnSoundTwo);
-                                  FlxG.sound.list.add(warnSoundThree);
-                                  FlxG.sound.list.add(warnSoundFour);
-                                  add(warnOne);
-                                  add(warnTwo);
-                                  add(warnThree);
-                                  add(warnFour);
-     
-                                  isStage = true;
-                        }
                         case 'spookeez' | 'monster' | 'south': 
                         {
                                   curStage = 'spooky';
@@ -2939,10 +2897,6 @@ class PlayState extends MusicBeatState
 		{
 			lightningStrikeShit();
 		}
-                if (isStage && curBeat == 50)
-                {
-                        screen.shake();
-                }
 	}
 
 	var curLight:Int = 0;
