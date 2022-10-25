@@ -61,6 +61,7 @@ class PlayState extends MusicBeatState
 
 	public static var camFollowSpeed:Float = 0.04;
 
+        var roomLevel:Bool = false;
 	var halloweenLevel:Bool = false;
 
 	private var vocals:FlxSound;
@@ -108,6 +109,10 @@ class PlayState extends MusicBeatState
   public var splashToggle = Config.splash;
 
 	var dialogue:Array<String> = ['blah blah blah', 'coolswag']
+
+        var roomBG:FlxSprite;
+        var isRoomLevel:Bool = false;
+
 	var halloweenBG:FlxSprite;
 	var isHalloween:Bool = false;
 
@@ -261,6 +266,21 @@ class PlayState extends MusicBeatState
 
 		switch (SONG.song.toLowerCase())
 		{
+                        case 'kilobyte':
+                        {
+                                  curStage = 'room';
+                                  roomLevel = true;
+      
+                                  var roomTexture = Paths.getSparrowAtlas('room_bg');
+
+                                  roomBG = new FlxSprite(-200, -100);
+                                  roomBG.frames = roomTexture;
+                                  roomBG.antialiasing = true;
+                                  add(roomBG);
+  
+                                  isRoomLevel = true;
+                        }
+
                         case 'spookeez' | 'monster' | 'south': 
                         {
                                   curStage = 'spooky';
@@ -875,6 +895,10 @@ class PlayState extends MusicBeatState
 				boyfriend.x += 40;
 				dad.y += 60;
 				dad.x -= 80;
+                        case 'roomStage':
+                                boyfriend.x += 40;
+                                dad.y += 50;
+                                dad.x -= 80;
 		}
 
 		add(gf);
