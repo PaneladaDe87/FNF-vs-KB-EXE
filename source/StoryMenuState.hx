@@ -24,14 +24,15 @@ class StoryMenuState extends MusicBeatState
 	var scoreText:FlxText;
 
 	var weekData:Array<Dynamic> = [
-		['Tutorial', 'Detected'],
+		['Tutorial'],
 		['Bopeebo', 'Fresh', 'Dadbattle'],
 		['Spookeez', 'South', "Monster"],
 		['Pico', 'Philly', "Blammed"],
 		['Satin-Panties', "High", "Milf"],
 		['Cocoa', 'Eggnog', 'Winter-Horrorland'],
 		['Senpai', 'Roses', 'Thorns'],
-		['ugh', 'guns', 'stress']
+		['ugh', 'guns', 'stress'],
+                ['Detected']
 	];
 	var curDifficulty:Int = 1;
 
@@ -45,7 +46,8 @@ class StoryMenuState extends MusicBeatState
 		['mom', 'bf', 'gf'],
 		['parents-christmas', 'bf', 'gf'],
 		['senpai', 'bf', 'gf'],
-		['tankman', 'bf', 'gf']
+		['tankman', 'bf', 'gf'],
+                ['dad', 'bf', 'gf']
 	];
 
 	var weekNames:Array<String> = [
@@ -56,7 +58,8 @@ class StoryMenuState extends MusicBeatState
 		"MOMMY MUST MURDER",
 		"RED SNOW",
 		"hating simulator ft. moawling",
-		"TANKMAN"
+		"TANKMAN",
+                "KIBY"
 	];
 
 	var txtWeekTitle:FlxText;
